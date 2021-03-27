@@ -1,0 +1,1096 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/19/2020 4:47:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="IST-RL-VH8-14"
+  DTS:CreatorName="AD\asigar"
+  DTS:DTSID="{BDB6F569-8B66-4BE2-9BAE-35AB3DF52719}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{69A28286-DC29-4B68-A36D-3610F9BCABA1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{0815AB18-20D4-4E8B-BC36-BD98F2554932}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5E586563-FCA4-452F-B41F-9AC622995EE7}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8F0F1470-2730-4F33-8ACE-12A721FAFF8D}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2A59BCB6-8649-4FA8-B624-18D39A5FDF4C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\hd.ad.syr.edu\03\66b1d5\Documents\Desktop\IST722-Project\t.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TweetID"
+              DTS:DTSID="{3210DDEF-2460-4C57-A135-3B8806D96951}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{9F69CAFB-B981-47B2-BB71-3B45A411B455}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{75B835BE-6002-424F-8887-FB3DE0D5F6AF}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TwitterUserID"
+              DTS:DTSID="{909AAB7D-BBBA-4E34-B111-F387342D3AF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tweets"
+              DTS:DTSID="{4BF113B3-57F6-4DFE-A64D-C4DA67498FA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Review"
+              DTS:DTSID="{F72F40C5-6D00-48C6-B67B-141F145BD72E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TweetID"
+              DTS:DTSID="{959A0815-D717-48FB-8340-75A75A4CA09D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{7A646633-58D2-4ED2-A71E-A501A5934528}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{18620F76-F962-4172-9719-246B99C2FEBC}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TwitterUserID"
+              DTS:DTSID="{1EAC03D2-6832-4A96-ADF9-29F5E948B1FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tweets"
+              DTS:DTSID="{D5C50736-FB39-4B9F-A90E-42F9D7407EB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Review"
+              DTS:DTSID="{47DEA8ED-A5D5-43EC-849F-A7797C5ADC3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TweetID"
+              DTS:DTSID="{3202261C-5D3B-4799-8BFB-032EA7CCC407}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{5CB94DE3-3403-4BCF-A730-8FC9B351BA3B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6DE1F52E-59A9-4676-A112-97911F50373D}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TwitterUserID"
+              DTS:DTSID="{AEE11F8E-4A53-4F44-8249-3D807E86DB97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tweets"
+              DTS:DTSID="{40E79D95-D14B-4291-948B-CF113CFC992B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Review"
+              DTS:DTSID="{71F8CD2D-8FDF-49F7-8DB8-0DE2E1D9E8C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TweetID"
+              DTS:DTSID="{829CDF18-B8F8-49DB-B3CC-F01D2FB8695C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{BAF55DA9-0947-4CEE-B3CA-0E07CC421984}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{166C898C-92A9-41D6-9D01-CB4E77DD9577}"
+      DTS:ObjectName="Flat File Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="G:\IST\MyGroups\hhkhan\IST722\37943g4\Milestones\Tweets_analysis.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TwitterUserID"
+              DTS:DTSID="{1E250A1F-2951-4DA1-9675-B560BDB31E21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tweets"
+              DTS:DTSID="{219AFF39-1093-410F-94B2-331E56E69F05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Review"
+              DTS:DTSID="{EC730EC1-AEAF-4213-A315-B4D3ADF9E113}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TweetID"
+              DTS:DTSID="{FFDC1930-ADDC-47CA-AD34-0F69481EF0F7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TimeStamp"
+              DTS:DTSID="{3500FEFD-CE2B-4040-A9BE-44337F32B452}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF - Stage to FactCustomerSatisfaction"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{c8f05628-1831-4bb0-8b26-a875bea47bcf}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF - Stage to FactCustomerSatisfaction"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Inputs[Data Conversion Input].Columns[Derived Column 1]"
+                      cachedDataType="i8"
+                      cachedName="Derived Column 1"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output].Columns[Derived Column 1]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Derived Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Derived Column 1]"
+                      name="Copy of Derived Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output].Columns[Derived Column 1]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Inputs[Derived Column Input].Columns[TweetID]"
+                      cachedDataType="r8"
+                      cachedName="TweetID"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TweetID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output].Columns[Derived Column 1]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output].Columns[Derived Column 1]"
+                      name="Derived Column 1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I8)#{Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TweetID]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I8)TweetID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Tweets_analysis$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TwitterUserID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TwitterUserID]"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TwitterUserID]"
+                      name="TwitterUserID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Tweets]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tweets]"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Tweets]"
+                      name="Tweets"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Review]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Review]"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Review]"
+                      name="Review"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TweetID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TweetID]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TweetID]"
+                      name="TweetID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TimeStamp]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TimeStamp]"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TimeStamp]"
+                      name="TimeStamp"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TwitterUserID]"
+                      dataType="wstr"
+                      length="255"
+                      name="TwitterUserID" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Tweets]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tweets" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[Review]"
+                      dataType="wstr"
+                      length="255"
+                      name="Review" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TweetID]"
+                      dataType="r8"
+                      name="TweetID" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[TimeStamp]"
+                      dataType="wstr"
+                      length="255"
+                      name="TimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[F6]"
+                      dataType="wstr"
+                      length="255"
+                      name="F6" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[F7]"
+                      dataType="wstr"
+                      length="255"
+                      name="F7" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[F8]"
+                      dataType="wstr"
+                      length="255"
+                      name="F8" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[F9]"
+                      dataType="wstr"
+                      length="255"
+                      name="F9" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].ExternalColumns[F10]"
+                      dataType="wstr"
+                      length="255"
+                      name="F10" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TwitterUserID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TwitterUserID]"
+                      name="TwitterUserID" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[Tweets]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[Tweets]"
+                      name="Tweets" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[Review]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[Review]"
+                      name="Review" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TweetID]"
+                      dataType="r8"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TweetID]"
+                      name="TweetID" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TimeStamp]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[TimeStamp]"
+                      name="TimeStamp" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[OLE DB Destination]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{88AFB6AF-060B-49ED-B23F-A85098B356E5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ist-cs-dw1.ad.syr.edu.ist722_hhkhan_cb4_stage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TwitterUserID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TwitterUserID"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TwitterUserID]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TwitterUserID]" />
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tweets]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Tweets"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tweets]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Tweets]" />
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Review]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Review"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Review]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[Review]" />
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TweetID]"
+                      cachedDataType="r8"
+                      cachedName="TweetID"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TweetID]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TweetID]" />
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeStamp]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TimeStamp"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output].Columns[TimeStamp]" />
+                    <inputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Derived Column 1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Derived Column 1"
+                      externalMetadataColumnId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Copy of Derived Column 1]"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Derived Column 1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TwitterUserID]"
+                      dataType="wstr"
+                      length="255"
+                      name="TwitterUserID" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tweets]"
+                      dataType="wstr"
+                      length="255"
+                      name="Tweets" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Review]"
+                      dataType="wstr"
+                      length="255"
+                      name="Review" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TweetID]"
+                      dataType="r8"
+                      name="TweetID" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeStamp]"
+                      dataType="wstr"
+                      length="255"
+                      name="TimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Copy of Derived Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="Copy of Derived Column 1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF - Stage to FactCustomerSatisfaction.Paths[Data Conversion Output]"
+              endId="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF - Stage to FactCustomerSatisfaction.Paths[Derived Column Output]"
+              endId="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF - Stage to FactCustomerSatisfaction.Paths[Excel Source Output]"
+              endId="Package\DF - Stage to FactCustomerSatisfaction\Derived Column.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\DF - Stage to FactCustomerSatisfaction\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="263.2,41.6"
+          Id="Package\DF - Stage to FactCustomerSatisfaction"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF - Stage to FactCustomerSatisfaction">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\DF - Stage to FactCustomerSatisfaction\Excel Source"
+          TopLeft="200.57143198714,33.6470592954167" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DF - Stage to FactCustomerSatisfaction\Derived Column"
+          TopLeft="294.85714787853,117.458825176727" />
+        <EdgeLayout
+          Id="Package\DF - Stage to FactCustomerSatisfaction.Paths[Excel Source Output]"
+          TopLeft="269.77143198714,75.2470592954167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="101.48571589139,42.2117658813107"
+              Start="0,0"
+              End="101.48571589139,34.7117658813107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1058829406554" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.1058829406554"
+                    Point2="0,21.1058829406554"
+                    Point3="4,21.1058829406554" />
+                  <mssgle:LineSegment
+                    End="97.4857158913905,21.1058829406554" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97.4857158913905,21.1058829406554"
+                    Point2="101.48571589139,21.1058829406554"
+                    Point3="101.48571589139,25.1058829406554" />
+                  <mssgle:LineSegment
+                    End="101.48571589139,34.7117658813107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\DF - Stage to FactCustomerSatisfaction\Data Conversion"
+          TopLeft="359.428577549604,196.376473342341" />
+        <EdgeLayout
+          Id="Package\DF - Stage to FactCustomerSatisfaction.Paths[Derived Column Output]"
+          TopLeft="371.25714787853,159.058825176727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.7714296710734,37.3176481656137"
+              Start="0,0"
+              End="65.7714296710734,29.8176481656137">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6588240828069" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6588240828069"
+                    Point2="0,18.6588240828069"
+                    Point3="4,18.6588240828069" />
+                  <mssgle:LineSegment
+                    End="61.7714296710734,18.6588240828069" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.7714296710734,18.6588240828069"
+                    Point2="65.7714296710734,18.6588240828069"
+                    Point3="65.7714296710734,22.6588240828069" />
+                  <mssgle:LineSegment
+                    End="65.7714296710734,29.8176481656137" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination"
+          TopLeft="437.714293168516,278.776473925765" />
+        <EdgeLayout
+          Id="Package\DF - Stage to FactCustomerSatisfaction.Paths[Data Conversion Output]"
+          TopLeft="437.028577549604,237.976473342341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.8857156189122,40.8000005834243"
+              Start="0,0"
+              End="85.8857156189122,33.3000005834243">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4000002917121" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4000002917121"
+                    Point2="0,20.4000002917121"
+                    Point3="4,20.4000002917121" />
+                  <mssgle:LineSegment
+                    End="81.8857156189122,20.4000002917121" />
+                  <mssgle:CubicBezierSegment
+                    Point1="81.8857156189122,20.4000002917121"
+                    Point2="85.8857156189122,20.4000002917121"
+                    Point3="85.8857156189122,24.4000002917121" />
+                  <mssgle:LineSegment
+                    End="85.8857156189122,33.3000005834243" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF - Stage to FactCustomerSatisfaction\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DF - Stage to FactCustomerSatisfaction\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
